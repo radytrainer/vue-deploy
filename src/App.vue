@@ -2,7 +2,7 @@
   <div>
     <nav class="bg-blue-600 text-white px-6 py-4 shadow-md">
       <div class="container mx-auto flex justify-between items-center">
-        <div class="text-xl font-bold">My Website</div>
+        <div class="text-xl font-bold">Kolodoni</div>
         <div class="space-x-4">
           <router-link to="/" class="hover:underline">Home</router-link>
           <router-link to="/about" class="hover:underline">About</router-link>
