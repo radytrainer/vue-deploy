@@ -1,10 +1,10 @@
 <template>
   <div>
-    <!-- Header -->
-    <header class="bg-blue-500 text-white py-16 text-center">
-      <h1 class="text-4xl font-bold mb-2">Contact Us</h1>
-      <p class="text-lg">We’d love to hear from you. Reach out using the form below.</p>
-    </header>
+ <!-- Header -->
+    <Header>
+      <template #head-title>{{ headerData.title }}</template>
+      <template #content-body>{{ headerData.description }}</template>
+    </Header>
 
     <!-- Contact Form Section -->
     <section class="py-12 px-6 max-w-4xl mx-auto">
@@ -71,4 +71,9 @@ const submitForm = () => {
   form.email = ''
   form.message = ''
 }
+const headerData = reactive({
+  title: 'Contact Us',
+  description: 'We would love to hear from you! Please fill out the form below.'
+})
+import Header from '../components/Header.vue';
 </script>

@@ -1,10 +1,10 @@
 <template>
   <div>
     <!-- Header -->
-    <header class="bg-blue-500 text-white py-16 text-center">
-      <h1 class="text-4xl font-bold mb-2">About Us</h1>
-      <p class="text-lg">Learn more about our mission, values, and team.</p>
-    </header>
+    <Header>
+      <template #head-title>{{ headerData.title }}</template>
+      <template #content-body>{{ headerData.description }}</template>
+    </Header>
 
     <!-- Body -->
     <section class="px-6 py-12 max-w-4xl mx-auto text-gray-800">
@@ -28,3 +28,11 @@
     </section>
   </div>
 </template>
+<script setup>
+  import { reactive } from 'vue';
+  const headerData = reactive({
+    title: 'About Us',
+    description: 'Learn more about our mission, values, and team.'
+  });
+  import Header from '../components/Header.vue';
+</script>
